@@ -32,6 +32,6 @@ jobs:
           message: "[auto] build: update compiled version"
           add: lib
           force: true
-          signoff: true
+          signoff: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
