@@ -74,6 +74,7 @@ if ! git diff --cached --quiet --exit-code; then
     if $INPUT_SIGNOFF; then
         signoffcmd=--signoff
     fi
+
     git commit -m "$INPUT_MESSAGE" --author="$INPUT_AUTHOR_NAME <$INPUT_AUTHOR_EMAIL>" "$signoffcmd"
 
     echo "Tagging commit..."
