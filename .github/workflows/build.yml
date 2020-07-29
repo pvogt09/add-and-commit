@@ -27,10 +27,11 @@ jobs:
         run: npm run build
 
       - name: Commit changes
-        uses: EndBug/add-and-commit@v4.0.0
+        uses: ./
         with:
           message: "[auto] build: update compiled version"
           add: lib
           force: true
+          signoff: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
